@@ -1,0 +1,57 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+}
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+}
+.content {
+  transform: perspective(300px) rotateX(30deg);
+}
+p {
+  text-align: center;
+  margin: 0;
+  font-family: Helvetica, sans-serif;
+  font-size: 80px;
+  font-weight: bold;
+  color: gold;
+}
+span {
+  cursor: pointer;
+  display: inline-block;
+}
+
+.animated {
+  animation-name: bounce;
+  animation-duration: 0.3s;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translate(0, 10px);
+    animation-timing-function: ease-out;
+  }
+  17% {
+    transform: translate(0, 15px);
+    animation-timing-function: ease-in;
+  }
+
+  51% {
+    transform: translate(0, -10px);
+    animation-timing-function: ease-in;
+  }
+
+  85% {
+    transfom: translate(0, -20px);
+    animation-timing-function: ease-in;
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
